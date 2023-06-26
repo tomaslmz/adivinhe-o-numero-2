@@ -25,7 +25,15 @@ main {
     display: none;
 }
 
-div {
+.info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.jogo {
     display: flex;
     flex-direction: row;
     justify-content: center;
