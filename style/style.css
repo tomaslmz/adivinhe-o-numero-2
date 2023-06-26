@@ -16,14 +16,34 @@ body {
 main {
     width: 80vw;
     height: 50vh;
+    max-width: 800px;
     border: 1px solid black;
     padding: 10px;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 60%;
+}
+
 .vidas {
+    display: block;
     clear: both;
     text-align: right;
-    padding: 5px;
+
+}
+
+.vidas > img {
+    
+    width: 30px;
 }
 
 .numero {
@@ -33,13 +53,16 @@ main {
     float: left;
     width: 25%;
     height: 50%;
-    font-size: 5em;
+    font-size: 4.5em;
     text-align: center;
     border: 1px solid black;
+    flex-grow: 1;
+    overflow: scroll;
 }
 
 .adivinhar {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
     align-items: center;
@@ -51,6 +74,7 @@ main {
 
 .dicas {
     clear: both;
-    margin-top: 200px;
+    padding: 5px;
+    border: 1px solid black;
 }
 
