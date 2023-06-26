@@ -27,7 +27,7 @@ main {
 
 .info {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     align-items: center;
     border: 1px solid black;
@@ -50,8 +50,8 @@ main {
 }
 
 .vidas > img {
-    
     width: 30px;
+    user-select: none;
 }
 
 .numero {
