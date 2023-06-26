@@ -8,18 +8,23 @@
 <link rel="stylesheet" href="./style/style.css">
 <body>
     <main>
-        <section class="vidas" id="vidas">
-            <img src="public/images/red-heart.png" id="vida1"><img src="public/images/red-heart.png" id="vida2"><img src="public/images/red-heart.png" id="vida3"><img src="public/images/red-heart.png" id="vida4"><img src="public/images/red-heart.png" id="vida5">
+        <section class="info">
+            <div id="mensagem" class="mensagem">
+                Lorem ipsum dolor sit
+            </div>
+            <div class=vidas>
+                <img src="public/images/red-heart.png" id="vida1"><img src="public/images/red-heart.png" id="vida2"><img src="public/images/red-heart.png" id="vida3"><img src="public/images/red-heart.png" id="vida4"><img src="public/images/red-heart.png" id="vida5">
+            </div>
         </section>
 
-        <div>
+        <div class="jogo">
             <section class="numero" id="numero">
                 ?
             </section>
     
             <section class="adivinhar">
                 <input type="text" name="numero" id="adivinhar">
-                <button type="submit">Adivinhar</button>
+                <button type="submit" onclick="adivinhar(adivinhar.numero)">Adivinhar</button>
             </section>
         </div>
 
