@@ -8,22 +8,33 @@
 <link rel="stylesheet" href="./style/style.css">
 <body>
     <main>
-        <section class="vidas">
-            S2 S2 S2 S2 S2
+        <section class="info">
+            <div id="mensagem" class="mensagem">
+                Lorem ipsum dolor sit
+            </div>
+            <div id="fases" class="fases">
+                Fase 1 (0-10)
+            </div>
+            <div class=vidas id="vidas">
+                <img src="public/images/red-heart.png" id="vida1"><img src="public/images/red-heart.png" id="vida2"><img src="public/images/red-heart.png" id="vida3"><img src="public/images/red-heart.png" id="vida4"><img src="public/images/red-heart.png" id="vida5">
+            </div>
         </section>
 
-        <section class="numero" id="numero">
-            ?
-        </section>
-
-        <section class="adivinhar">
-            <input type="text" name="numero" id="adivinhar">
-            <button type="submit">Adivinhar</button>
-        </section>
+        <div class="jogo">
+            <section class="numero" id="numero">
+                ?
+            </section>
+    
+            <section class="adivinhar">
+                <input type="text" name="numero" id="adivinhar">
+                <button type="submit" onclick="adivinhar(parseInt(document.getElementById('adivinhar').value))">Adivinhar</button>
+            </section>
+        </div>
 
         <article class="dicas" id="dica">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis qui vero sed iusto aspernatur, quisquam, ex esse obcaecati illum deserunt ad. Tempora, nostrum omnis quaerat distinctio nemo sunt ratione voluptatem?
         </article>
     </main>
+    <script src="./src/script.js"></script>
 </body>
 </html>
