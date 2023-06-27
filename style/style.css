@@ -93,3 +93,20 @@ main {
     display: inline-block;
     width: 100px;
 }
+
+.msg-dica {
+    display: inline;
+    padding: 5px;
+}
+
+.reiniciar {
+    display: flex;
+    justify-content: center;
+}
+
+.reiniciar > button {
+    margin-top: 20px;
+    display: none;
+}
+
+
