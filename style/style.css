@@ -43,10 +43,12 @@ main {
 }
 
 .vidas {
-    display: block;
+    display: flex;
     clear: both;
     text-align: right;
-
+    flex-direction: row-reverse;
+    max-width: 150px;
+    flex-wrap: wrap;
 }
 
 .vidas > img {
