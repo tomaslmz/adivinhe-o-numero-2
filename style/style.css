@@ -99,13 +99,16 @@ main {
     padding: 5px;
 }
 
-.reiniciar {
+.extra {
     display: flex;
     justify-content: center;
 }
 
-.reiniciar > button {
+.extra > button {
     margin-top: 20px;
+}
+
+#btn-reiniciar {
     display: none;
 }
 
