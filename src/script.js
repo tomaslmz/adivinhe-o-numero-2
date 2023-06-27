@@ -6,11 +6,19 @@ const adivinhar = (numero) => {
     if(numero >= 0 && numero <= limite) {
         document.getElementById("adivinhar").value = '';
         if(numero == numerosecreto) {
-            vidas = 5;
+            if(vidas >= 5) {
+                vidas++;
+            } else {
+                vidas = 5;
+            }
             document.getElementById("mensagem").innerHTML = "Você acertou!";
             document.getElementById("vidas").innerHTML = '';
             for(let i = 0; i<vidas; i++) {
-                document.getElementById("vidas").innerHTML += '<img src="public/images/red-heart.png" alt="">';
+                if(i >= 5) {
+                    document.getElementById("vidas").innerHTML += '<img src="public/images/yellow-heart.png" alt="">';
+                } else {
+                    document.getElementById("vidas").innerHTML += '<img src="public/images/red-heart.png" alt="">';
+                }
             }
 
             document.getElementById("numero").innerHTML = numerosecreto;
@@ -21,18 +29,26 @@ const adivinhar = (numero) => {
                 document.getElementById("numero").innerHTML = '?';
                 document.getElementById("mensagem").innerHTML = "";
                 numerosecreto = parseInt(Math.random() * (limite - 0) + 0);
+                document.getElementById('btn-adivinhar').disabled = false;
             }, 5000);
+
+            document.getElementById('btn-adivinhar').disabled = true;
             
         } else {
             if(vidas > 1) {
                 vidas--;
-                document.getElementById("vidas").innerHTML = ''
-                for(let i = 0; i<5-vidas; i++) {
-                    document.getElementById("vidas").innerHTML += '<img src="public/images/gray-heart.png" alt="">';
-                }
+                document.getElementById("vidas").innerHTML = '';
+                
                 for(let i = 0; i<vidas; i++) {
                     document.getElementById("vidas").innerHTML += '<img src="public/images/red-heart.png" alt="">';
                 }
+
+                for(let i = 0; i<5-vidas; i++) {
+                    if(vidas < 5) {
+                        document.getElementById("vidas").innerHTML += '<img src="public/images/gray-heart.png" alt="">';
+                    }
+                }
+    
                 document.getElementById("mensagem").innerHTML = "Você errou!"
             }  else {
                 document.getElementById("vidas").innerHTML = ''
@@ -42,6 +58,7 @@ const adivinhar = (numero) => {
                 }
                 document.getElementById("mensagem").innerHTML = "Você perdeu!";
                 document.getElementById("adivinhar").disabled = true;
+                document.getElementById("btn-adivinhar").disabled = true;
             }
         }
     } else {
