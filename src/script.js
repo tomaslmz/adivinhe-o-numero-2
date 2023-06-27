@@ -48,6 +48,12 @@ const adivinhar = (numero) => {
                         document.getElementById("vidas").innerHTML += '<img src="public/images/gray-heart.png" alt="">';
                     }
                 }
+
+                if(numero > numerosecreto) {
+                    document.getElementById("dica").innerHTML += numero + " > ?    ";
+                } else {
+                    document.getElementById("dica").innerHTML += numero + " < ?    ";
+                }
     
                 document.getElementById("mensagem").innerHTML = "Você errou!"
             }  else {
