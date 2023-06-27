@@ -84,7 +84,12 @@ main {
 
 .dicas {
     clear: both;
+    height: 100px;
     padding: 5px;
     border: 1px solid black;
 }
 
+.msg {
+    display: inline-block;
+    width: 100px;
+}
