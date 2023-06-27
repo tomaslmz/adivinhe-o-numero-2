@@ -17,8 +17,10 @@ main {
     width: 80vw;
     height: 50vh;
     max-width: 800px;
-    border: 1px solid black;
-    padding: 10px;
+    min-height: 500px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.404);
+    border-radius: 10px;
+    padding: 20px;
 }
 
 ::-webkit-scrollbar {
@@ -30,7 +32,9 @@ main {
     justify-content: space-around;
     flex-direction: row;
     align-items: center;
-    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.219);
 }
 
 .jogo {
@@ -65,7 +69,8 @@ main {
     height: 50%;
     font-size: 4.5em;
     text-align: center;
-    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.219);
     flex-grow: 1;
     overflow: scroll;
 }
@@ -76,7 +81,8 @@ main {
     gap: 10px;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.219);
     width: 48%;
     height: 50%;
     float: right;
@@ -86,7 +92,8 @@ main {
     clear: both;
     height: 100px;
     padding: 5px;
-    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.219);
 }
 
 .msg {
@@ -102,6 +109,20 @@ main {
 .extra {
     display: flex;
     justify-content: center;
+}
+
+.btn {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(94,228,166,1) 0%, rgba(0,212,255,1) 100%);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.219);
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 .extra > button {
