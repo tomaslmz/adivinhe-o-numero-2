@@ -13,10 +13,12 @@ if(localStorage.getItem("theme") == "dark") {
     document.getElementById("numero").style.backgroundColor = "rgb(32, 32, 46)";
     document.getElementById("numero").style.color = "white";
     document.getElementById("body").style.backgroundImage = "linear-gradient(to top, #0e1e31, #000000)";
-    localStorage.setItem("theme", "dark");
+    document.getElementById("btn-tema").innerHTML = "Modo claro";
+    
 } else {
     document.getElementById("body").style.backgroundColor = "white";
     document.getElementById("numero").style.backgroundColor = "white";
+    document.getElementById("btn-tema").innerHTML = "Modo escuro";
 }
 
 const adivinhar = (numero) => {
@@ -124,6 +126,7 @@ const mudarTema = () => {
         document.getElementById("numero").style.backgroundColor = "rgb(32, 32, 46)";
         document.getElementById("numero").style.color = "white";
         localStorage.setItem("theme", "dark");
+        document.getElementById("btn-tema").innerHTML = "Modo claro";
     } else {
         document.getElementById("body").style.backgroundImage = "linear-gradient(to top, #b3aeae, #dfd5d5)";
         document.getElementById("dica").style.backgroundColor = "white";
@@ -135,5 +138,6 @@ const mudarTema = () => {
         document.getElementById("numero").style.backgroundColor = "white";
         document.getElementById("numero").style.color = "black";
         localStorage.setItem("theme", "white");
+        document.getElementById("btn-tema").innerHTML = "Modo escuro";
     }
 }
