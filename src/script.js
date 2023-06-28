@@ -2,6 +2,12 @@ var vidas = 5;
 var limite = 10;
 var numerosecreto = parseInt(Math.random() * (limite - 0) + 0);
 
+document.addEventListener("keypress", (e) => {
+    if(e.key === 'Enter') {
+        adivinhar(document.getElementById("adivinhar").value);
+    }
+})  
+
 if(localStorage.getItem("theme") == "dark") {
     document.getElementById("body").style.backgroundColor = "rgb(20, 20, 29)";
     document.getElementById("dica").style.backgroundColor = "rgb(32, 32, 46)";
