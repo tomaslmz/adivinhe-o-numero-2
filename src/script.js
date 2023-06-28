@@ -96,6 +96,7 @@ const adivinhar = (numero) => {
                 }
                 document.getElementById("mensagem").style.color = "red";
                 document.getElementById("mensagem").innerHTML = "Você perdeu!";
+                document.getElementById("numero").innerHTML = numerosecreto;
                 document.getElementById("adivinhar").disabled = true;
                 document.getElementById("btn-adivinhar").disabled = true;
             }
