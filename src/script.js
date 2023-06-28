@@ -25,11 +25,13 @@ const adivinhar = (numero) => {
     if(numero >= 0 && numero <= limite) {
         document.getElementById("adivinhar").value = '';
         if(numero == numerosecreto) {
+            document.getElementById("dica").innerHTML = '';
             if(vidas >= 5) {
                 vidas++;
             } else {
                 vidas = 5;
             }
+            document.getElementById("mensagem").style.color = "green";
             document.getElementById("mensagem").innerHTML = "Você acertou!";
             document.getElementById("vidas").innerHTML = '';
             for(let i = 0; i<vidas; i++) {
@@ -73,7 +75,8 @@ const adivinhar = (numero) => {
                 } else {
                     document.getElementById("dica").innerHTML += '<p class="msg-dica">' + numero + ' < ?</p>';
                 }
-    
+                
+                document.getElementById("mensagem").style.color = "red";
                 document.getElementById("mensagem").innerHTML = "Você errou!"
             }  else {
                 document.getElementById('btn-reiniciar').style.display = "block";
@@ -82,6 +85,7 @@ const adivinhar = (numero) => {
                 for(let i = 0; i<5-vidas; i++) {
                     document.getElementById("vidas").innerHTML += '<img src="public/images/gray-heart.png" alt="">';
                 }
+                document.getElementById("mensagem").style.color = "red";
                 document.getElementById("mensagem").innerHTML = "Você perdeu!";
                 document.getElementById("adivinhar").disabled = true;
                 document.getElementById("btn-adivinhar").disabled = true;
