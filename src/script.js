@@ -2,6 +2,23 @@ var vidas = 5;
 var limite = 10;
 var numerosecreto = parseInt(Math.random() * (limite - 0) + 0);
 
+if(localStorage.getItem("theme") == "dark") {
+    document.getElementById("body").style.backgroundImage = "none";
+    document.getElementById("body").style.backgroundColor = "rgb(20, 20, 29)";
+    document.getElementById("dica").style.backgroundColor = "rgb(32, 32, 46)";
+    document.getElementById("dica").style.color = "white";
+    document.querySelector(".adivinhar").style.backgroundColor = "rgb(32, 32, 46)";
+    document.querySelector(".info").style.backgroundColor = "rgb(32, 32, 46)";
+    document.querySelector("main").style.backgroundColor = "rgb(20, 20, 29)"
+    document.querySelector(".info").style.color = "white";
+    document.getElementById("numero").style.backgroundColor = "rgb(32, 32, 46)";
+    document.getElementById("numero").style.color = "white";
+    localStorage.setItem("theme", "dark");
+} else {
+    document.getElementById("body").style.backgroundColor = "white";
+    document.getElementById("numero").style.backgroundColor = "white";
+}
+
 const adivinhar = (numero) => {
     if(numero >= 0 && numero <= limite) {
         document.getElementById("adivinhar").value = '';
@@ -92,5 +109,32 @@ const reiniciar = () => {
         } else {
             document.getElementById("vidas").innerHTML += '<img src="public/images/red-heart.png" alt="">';
         }
+    }
+}
+
+const mudarTema = () => {
+    if(document.querySelector("main").style.backgroundColor == "white" || document.querySelector("main").style.backgroundColor == "") {
+        document.getElementById("body").style.backgroundColor = "rgb(20, 20, 29)";
+        document.getElementById("body").style.backgroundImage = "none";
+        document.getElementById("dica").style.backgroundColor = "rgb(32, 32, 46)";
+        document.querySelector("main").style.backgroundColor = "rgb(20, 20, 29)"
+        document.getElementById("dica").style.color = "white";
+        document.querySelector(".adivinhar").style.backgroundColor = "rgb(32, 32, 46)";
+        document.querySelector(".info").style.backgroundColor = "rgb(32, 32, 46)";
+        document.querySelector(".info").style.color = "white";
+        document.getElementById("numero").style.backgroundColor = "rgb(32, 32, 46)";
+        document.getElementById("numero").style.color = "white";
+        localStorage.setItem("theme", "dark");
+    } else {
+        document.getElementById("body").style.backgroundImage = "linear-gradient(to top, #b3aeae, #dfd5d5)";
+        document.getElementById("dica").style.backgroundColor = "white";
+        document.querySelector("main").style.backgroundColor = "white";
+        document.getElementById("dica").style.color = "black";
+        document.querySelector(".adivinhar").style.backgroundColor = "white";
+        document.querySelector(".info").style.backgroundColor = "white";
+        document.querySelector(".info").style.color = "black";
+        document.getElementById("numero").style.backgroundColor = "white";
+        document.getElementById("numero").style.color = "black";
+        localStorage.setItem("theme", "white");
     }
 }
