@@ -17,7 +17,7 @@ main {
     width: 80vw;
     height: 50vh;
     max-width: 800px;
-    min-height: 500px;
+    min-height: 525px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.404);
     border-radius: 10px;
     padding: 20px;
@@ -32,8 +32,8 @@ main {
     justify-content: space-around;
     flex-direction: row;
     align-items: center;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 10px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.219);
 }
 
@@ -109,6 +109,7 @@ main {
 .extra {
     display: flex;
     justify-content: center;
+    gap: 10px;
 }
 
 .btn {
@@ -123,6 +124,30 @@ main {
 .btn:hover {
     color: white;
     text-decoration: underline;
+}
+
+.btn:disabled, button[disabled=disabled] {
+    background: rgb(212, 212, 212);
+    color: rgb(146, 146, 146);
+}
+
+.btn:disabled:hover, button:hover[disabled=disabled] {
+    text-decoration: none;
+    cursor:default
+}
+
+input {
+    border: none;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.37);
+    /* border: rgba(0, 0, 0, 0.219) 1px solid; */
+    height: 25px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.479);
 }
 
 .extra > button {
