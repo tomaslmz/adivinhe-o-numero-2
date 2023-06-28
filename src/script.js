@@ -4,7 +4,9 @@ var numerosecreto = parseInt(Math.random() * (limite - 0) + 0);
 
 document.addEventListener("keypress", (e) => {
     if(e.key === 'Enter') {
-        adivinhar(document.getElementById("adivinhar").value);
+        if(document.getElementById("adivinhar").disabled == false) {
+            adivinhar(document.getElementById("adivinhar").value);
+        }
     }
 })  
 
@@ -14,7 +16,7 @@ if(localStorage.getItem("theme") == "dark") {
     document.getElementById("dica").style.color = "white";
     document.querySelector(".adivinhar").style.backgroundColor = "rgb(32, 32, 46)";
     document.querySelector(".info").style.backgroundColor = "rgb(32, 32, 46)";
-    document.querySelector("main").style.backgroundColor = "rgb(20, 20, 29)"
+    document.querySelector("main").style.backgroundColor = "rgb(20, 20, 29)";
     document.querySelector(".info").style.color = "white";
     document.getElementById("numero").style.backgroundColor = "rgb(32, 32, 46)";
     document.getElementById("numero").style.color = "white";
@@ -23,6 +25,7 @@ if(localStorage.getItem("theme") == "dark") {
     
 } else {
     document.getElementById("body").style.backgroundColor = "white";
+    document.querySelector("main").style.backgroundColor = "white"
     document.getElementById("numero").style.backgroundColor = "white";
     document.getElementById("btn-tema").innerHTML = "Modo escuro";
 }
