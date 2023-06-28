@@ -142,7 +142,7 @@ const mudarTema = () => {
         localStorage.setItem("theme", "dark");
         document.getElementById("btn-tema").innerHTML = "Modo claro";
     } else {
-        document.getElementById("body").style.backgroundImage = "linear-gradient(to top, #b3aeae, #dfd5d5)";
+        document.getElementById("body").style.backgroundImage = "linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(179,174,174,1) 0%, rgba(223,213,213,1) 50%)";
         document.getElementById("dica").style.backgroundColor = "white";
         document.querySelector("main").style.backgroundColor = "white";
         document.getElementById("dica").style.color = "black";
