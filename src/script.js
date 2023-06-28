@@ -3,7 +3,6 @@ var limite = 10;
 var numerosecreto = parseInt(Math.random() * (limite - 0) + 0);
 
 if(localStorage.getItem("theme") == "dark") {
-    document.getElementById("body").style.backgroundImage = "none";
     document.getElementById("body").style.backgroundColor = "rgb(20, 20, 29)";
     document.getElementById("dica").style.backgroundColor = "rgb(32, 32, 46)";
     document.getElementById("dica").style.color = "white";
@@ -13,6 +12,7 @@ if(localStorage.getItem("theme") == "dark") {
     document.querySelector(".info").style.color = "white";
     document.getElementById("numero").style.backgroundColor = "rgb(32, 32, 46)";
     document.getElementById("numero").style.color = "white";
+    document.getElementById("body").style.backgroundImage = "linear-gradient(to top, #0e1e31, #000000)";
     localStorage.setItem("theme", "dark");
 } else {
     document.getElementById("body").style.backgroundColor = "white";
@@ -114,8 +114,7 @@ const reiniciar = () => {
 
 const mudarTema = () => {
     if(document.querySelector("main").style.backgroundColor == "white" || document.querySelector("main").style.backgroundColor == "") {
-        document.getElementById("body").style.backgroundColor = "rgb(20, 20, 29)";
-        document.getElementById("body").style.backgroundImage = "none";
+        document.getElementById("body").style.backgroundImage = "linear-gradient(to top, #0e1e31, #000000)";
         document.getElementById("dica").style.backgroundColor = "rgb(32, 32, 46)";
         document.querySelector("main").style.backgroundColor = "rgb(20, 20, 29)"
         document.getElementById("dica").style.color = "white";
