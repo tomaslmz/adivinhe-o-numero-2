@@ -45,9 +45,9 @@ const adivinhar = (numero) => {
             document.getElementById("vidas").innerHTML = '';
             for(let i = 0; i<vidas; i++) {
                 if(i >= 5) {
-                    document.getElementById("vidas").innerHTML += '<img src="public/images/yellow-heart.png" alt="">';
+                    document.getElementById("vidas").innerHTML += '<img src="public/images/yellow-heart.png" alt="coração">';
                 } else {
-                    document.getElementById("vidas").innerHTML += '<img src="public/images/red-heart.png" alt="">';
+                    document.getElementById("vidas").innerHTML += '<img src="public/images/red-heart.png" alt="coração">';
                 }
             }
 
@@ -70,12 +70,12 @@ const adivinhar = (numero) => {
                 document.getElementById("vidas").innerHTML = '';
                 
                 for(let i = 0; i<vidas; i++) {
-                    document.getElementById("vidas").innerHTML += '<img src="public/images/red-heart.png" alt="">';
+                    document.getElementById("vidas").innerHTML += '<img src="public/images/red-heart.png" alt="coração">';
                 }
 
                 for(let i = 0; i<5-vidas; i++) {
                     if(vidas < 5) {
-                        document.getElementById("vidas").innerHTML += '<img src="public/images/gray-heart.png" alt="">';
+                        document.getElementById("vidas").innerHTML += '<img src="public/images/gray-heart.png" alt="coração">';
                     }
                 }
 
@@ -92,7 +92,7 @@ const adivinhar = (numero) => {
                 document.getElementById("vidas").innerHTML = ''
                 vidas--;
                 for(let i = 0; i<5-vidas; i++) {
-                    document.getElementById("vidas").innerHTML += '<img src="public/images/gray-heart.png" alt="">';
+                    document.getElementById("vidas").innerHTML += '<img src="public/images/gray-heart.png" alt="coração">';
                 }
                 document.getElementById("mensagem").style.color = "red";
                 document.getElementById("mensagem").innerHTML = "Você perdeu!";
@@ -121,9 +121,9 @@ const reiniciar = () => {
     document.getElementById("vidas").innerHTML = '';
     for(let i = 0; i<vidas; i++) {
         if(i >= 5) {
-            document.getElementById("vidas").innerHTML += '<img src="public/images/yellow-heart.png" alt="">';
+            document.getElementById("vidas").innerHTML += '<img src="public/images/yellow-heart.png" alt="coração">';
         } else {
-            document.getElementById("vidas").innerHTML += '<img src="public/images/red-heart.png" alt="">';
+            document.getElementById("vidas").innerHTML += '<img src="public/images/red-heart.png" alt="coração">';
         }
     }
 }
