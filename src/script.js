@@ -4,8 +4,10 @@ var numerosecreto = parseInt(Math.random() * (limite - 0) + 0);
 
 document.addEventListener("keypress", (e) => {
     if(e.key === 'Enter') {
-        if(document.getElementById("adivinhar").disabled == false) {
-            adivinhar(document.getElementById("adivinhar").value);
+        if(document.getElementById("adivinhar").value != "") {
+            if(document.getElementById("adivinhar").disabled == false) {
+                adivinhar(document.getElementById("adivinhar").value);
+            }
         }
     }
 })  
