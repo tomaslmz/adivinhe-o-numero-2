@@ -18,6 +18,7 @@ if(localStorage.getItem("theme") == "dark") {
     document.querySelector(".info").style.backgroundColor = "rgb(32, 32, 46)";
     document.querySelector("main").style.backgroundColor = "rgb(20, 20, 29)";
     document.querySelector(".info").style.color = "white";
+    document.querySelector("label").style.color = "white";
     document.getElementById("numero").style.backgroundColor = "rgb(32, 32, 46)";
     document.getElementById("numero").style.color = "white";
     document.getElementById("body").style.backgroundImage = "linear-gradient(to top, #0e1e31, #000000)";
@@ -131,6 +132,7 @@ const reiniciar = () => {
 const mudarTema = () => {
     if(document.querySelector("main").style.backgroundColor == "white" || document.querySelector("main").style.backgroundColor == "") {
         document.getElementById("body").style.backgroundImage = "linear-gradient(to top, #0e1e31, #000000)";
+        document.querySelector("label").style.color = "white";
         document.getElementById("dica").style.backgroundColor = "rgb(32, 32, 46)";
         document.querySelector("main").style.backgroundColor = "rgb(20, 20, 29)"
         document.getElementById("dica").style.color = "white";
@@ -145,6 +147,7 @@ const mudarTema = () => {
         document.getElementById("body").style.backgroundImage = "linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(179,174,174,1) 0%, rgba(223,213,213,1) 50%)";
         document.getElementById("dica").style.backgroundColor = "white";
         document.querySelector("main").style.backgroundColor = "white";
+        document.querySelector("label").style.color = "black";
         document.getElementById("dica").style.color = "black";
         document.querySelector(".adivinhar").style.backgroundColor = "white";
         document.querySelector(".info").style.backgroundColor = "white";
